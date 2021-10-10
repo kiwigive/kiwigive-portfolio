@@ -21,3 +21,13 @@ The design of this page is a web browser window. You may see the seal icon bounc
 
 - contact
 The core of this page is a contact box. You may use this box to send me a message. An empty field is not accepted, all fields are required and the email field has basic email checking. If the message was sent successfully, it will be delivered via LINE application and I will be notified immediately.
+
+
+#### How to run the projects
+```
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+export FLASK_APP=application
+flask run
+```
