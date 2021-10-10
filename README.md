@@ -1,5 +1,5 @@
 # CS50 Final Project: A Personal Portfolio Website Project
-##### By Kiwigive
+##### By Kiwigive.
 #### Video Demo:  https://www.youtube.com/watch?v=f0poFig4v5w
 #### Introduction
 Kiwigive is my personal portfolio website. At first, I think about making a routine tracking web application. For my certain level of knowledge, I would like to start from the simplest one first. I decided to do the online portfolio because it will be useful. I can use this website to collect all of my information and my future projects.
