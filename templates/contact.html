@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Contact
+{% endblock %}
+
+{% block main %}
+<div class="contact">
+    <div class="contact-header">
+        <img src="/static/contact.png" width="100%">
+    </div>
+    <div class="section2">
+    <div class="contact-blog container p-5" style="text-align: right">
+        <h3 class="topic">Contact me</h3>
+        <p>If you would like to get in touch with me, whether to hire me or just say hi,
+        please feel free to contact me using the form below or via my social media in any platform.
+        I will be sure to get back to you as soon as possible.</p>
+        <br>
+        <p> Thanks for reaching out to me!</p>
+    </div>
+    </div>
+    <div class="hi"></div>
+    <div class="section-about">
+    <div class="container p-5">
+        <div class="row">
+        <form class="contact-card col-lg-6.5" action="/contact" method="post" onsubmit="return validateForm();">
+            Name <span class="invalid"></span>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="name" placeholder="name" type="text">
+            </div>
+            Email <span class="invalid in-email"></span>
+            <div class="form-group">
+                <input autocomplete="off" class="form-control" name="email" placeholder="example@domain" type="email">
+            </div>
+            Message <span class="invalid"></span>
+            <div class="form-group">
+                <textarea id="message" autocomplete="off" class="form-control" name="message" placeholder="Please enter your message" style="height:200px"></textarea>
+            </div>
+            <button class="btn btn-give" type="submit">Send Message</button>
+        </form>
+        <div class="line center col-lg-1">
+                <div class="vl"></div>
+                <div class="or"> OR </div>
+                <div class="vl"></div>
+        </div>
+        <div class="contact-info col-lg-4.5">
+            <div class="sus">
+            <a title="Email me" href="mailto: give.athisa@gmail.com" target="_blank" class="me">
+                <i class="fas fa-envelope social-media-icon" aria-label="github"></i><span class="info-text">&ensp; give.athisa@gmail.com</span>
+            </a>
+            </div>
+            <div>
+            <a title="GitHub" href="https://github.com/kiwigive/" target="_blank" class="me">
+                <i class="fa fa-github social-media-icon" aria-label="github"></i>&ensp; github.com/kiwigive
+            </a>
+            </div>
+            <div>
+            <a title="LinkedIn" href="https://www.linkedin.com/in/athisa-laungvarunyoo-a3bb5b217/" target="_blank" class="me">
+                <i class="fab fa-linkedin social-media-icon" aria-hidden="true"></i>&ensp; Athisa Laungvarunyoo
+            </a>
+            </div>
+            <div>
+            <a title="Facebook" href="https://www.facebook.com/kiwigive/" target="_blank" class="me">
+                <i class="fab fa-facebook social-media-icon" aria-hidden="true"></i>&ensp; fb.com/kiwigive
+            </a>
+            </div>
+            <div>
+            <a title="Instagram" href="https://www.instagram.com/glomgive/" target="_blank" class="me">
+                <i class="fab fa-instagram-square social-media-icon" aria-hidden="true"></i>&ensp; @glomgive
+            </a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+<div class="end"></div>
+</div>
+
+<script>
+    if ({{status}}) {
+    if ({{status}} === 200) {
+        alert('Your message was already sent.\nThank you for reaching out to me >w<~');
+    }
+    else {
+        alert('Sorry, something went wrong.\nPlease try again.');
+    };}
+
+
+
+    function isOK(str) {
+        if (!str || str.length === 0 || /^\s*$/.test(str)) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    function validateEmail(email) {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    function validateForm() {
+        let invalid = document.querySelectorAll(".invalid");
+        let field = document.querySelectorAll(".form-control");
+        let email = document.querySelector('input[name="email"]');
+        let check = true;
+        for (let i = 0; i < field.length; i++) {
+            let x = field[i].value;
+            if (!isOK(x.trim())) {
+                invalid[i].innerHTML = "<span style='color: #e94040;font-weight: lighter;'>*required</span>";
+                check = false;
+            }
+        }
+        for (let i = 0; i < field.length; i++) {
+            let x = field[i].value;
+            if (isOK(x.trim())) {
+                invalid[i].innerHTML = "";
+            }
+        }
+        if (isOK(email.value.trim())) {
+            if (!validateEmail(email.value.trim())) {
+                document.querySelector(".in-email").innerHTML = "<span style='color: #e94040;font-weight: lighter;'>*invalid email</span>";
+                check = false;
+            }
+        }
+        if (check == true) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+</script>
+
+{% endblock %}

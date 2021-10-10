@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Project
+{% endblock %}
+
+{% block main %}
+<main class="hide container p-5">
+<div class="project">
+    <div class="window-outer">
+        <div class="window-icon-group">
+            <div class="window-icon"><img class="window-icon-pic" id="myImg" width="16" height="auto" src="/static/x.png"></div>
+            <div class="window-icon"><img class="window-icon-pic" id="myImg" width="16" height="auto" src="/static/-.png"></div>
+            <div class="window-icon"><img class="window-icon-pic" id="myImg" width="16" height="auto" src="/static/enlarge.png"></div>
+        </div>
+        <div class="window-top">
+            <div style="display: inline-block;">
+                <span class="topic-window">PR</span>
+                <img class="ball" src="/static/logo_small.png">
+                <span class="topic-window">JECT</span>
+            </div>
+        </div>
+        <div class="window-body row">
+            <div class="article-col col-lg-6">
+                <div class="blog-container">
+                    <div class="blog text-brown">
+                        <div class="blog-img">
+                            <img class="img-blog" src="/static/web2.png">
+                        </div>
+                        <div class="content-blog">
+                            <div class="blog-inner">
+                                <h5 class="topic left">Portfolio Website</h5>
+                                <p class="left">
+                                    This project is this website, which is the final project of CS50x course.
+                                    It is my firstly and proudly present of computer science project.
+                                    I design my website with liveliness and playful color theme, which can represent my personality so well.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="more-info">
+                            More Info <i class="fas fa-angle-double-right"></i>
+                        </div>
+                    </div>
+                    <a class="middle" href="/project/portfolio">
+                        <div class="middle-text">More Info</div>
+                    </a>
+                </div>
+            </div>
+            <div class="article-col col-lg-6">
+                <div class="blog-container">
+                    <div class="blog text-brown">
+                        <div class="blog-img">
+                            <img class="img-blog" src="/static/gardner.png">
+                        </div>
+                        <div class="content-blog">
+                            <div class="blog-inner">
+                                <h5 class="topic left">An extension of Martin Gardner's card trick</h5>
+                                <p class="left">
+                                    This project is my bachelor's thesis. It is about a mathematic card trick.
+                                    This trick lets the inspector memorize a random card. After the procedure of recollecting,
+                                    the chosen card will finally be at the desire position.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="more-info">
+                            More Info <i class="fas fa-angle-double-right"></i>
+                        </div>
+                    </div>
+                    <a class="middle" href="/project/gardner">
+                        <div class="middle-text">More Info</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    $(document).ready(function(){
+  if(window.innerWidth < 768){
+    $('.hide').removeClass('p-5');
+  }
+});
+
+$(window).resize(function(){
+  if(window.innerWidth < 768){
+      $('.hide').removeClass('p-5');
+
+  }else{
+    $('.hide').addClass('p-5');
+  }
+});
+
+</script>
+</main>
+{% endblock %}

@@ -1,0 +1,368 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    An Extension of Martin Gardner's Card Trick Project
+{% endblock %}
+
+{% block main %}
+<main class="hide container p-5">
+<div class="project">
+    <div class="window-outer">
+        <div class="window-icon-group">
+            <div class="window-icon"><img class="window-icon-pic" id="myImg" width="16" height="auto" src="/static/x.png"></div>
+            <div class="window-icon"><img class="window-icon-pic" id="myImg" width="16" height="auto" src="/static/-.png"></div>
+            <div class="window-icon"><img class="window-icon-pic" id="myImg" width="16" height="auto" src="/static/enlarge.png"></div>
+        </div>
+        <div class="window-top">
+        <div style="display: inline-block;">
+                <span class="topic-window">PR</span>
+                <img class="ball" src="/static/logo_small.png">
+                <span class="topic-window">JECT</span>
+            </div>
+        </div>
+        <div class="window-top" style="margin-top: 5px;">
+            <div style="display: inline-block;">
+                <span class="topic-window"><h1 style="font-size:17%">AN EXTENSION OF MARTIN GARDNER CARD TRICK</h1></span>
+            </div>
+        </div>
+        <div class="window-body text-brown">
+            <div class="window-content">
+                <h5 class="topic">Gardner's Problem Solver</h5>
+            <div style="padding: 2% 0">
+            <form class="contact-card" action="/result" method="get" onsubmit="return validateForm();" target="_blank">
+            <div id="detect"></div>
+            The number of dealing piles (M) <span class="invalid"></span>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="m" id="m" placeholder="M (positive integer)" type="number" min="1" step="1">
+            </div>
+            The number of cards in each pile (N) <span class="invalid"></span>
+            <div class="form-group">
+                <input autocomplete="off" class="form-control" name="n" id="n" placeholder="N (positive integer)" type="number" min="1" step="1">
+            </div>
+            The number of dealing rounds (K) <span class="invalid"></span>
+            <div class="form-group">
+                <input autocomplete="off" class="form-control" name="k" id="k" placeholder="K (positive integer)" type="number" min="1" step="1"></input>
+            </div>
+            <button class="btn btn-give" type="reset" value="Reset">Reset</button>
+            <button class="btn btn-give" type="submit" style="float:right">Submit</button>&ensp;
+
+            </form>
+            </div>
+            </div>
+            <div class="window-content">
+                <h5 class="topic">Abstract</h5>
+                <p style="text-align:justify; text-indent:4em;">Martin Gardner’s card trick is a classic mathematical card trick, using number base and ordering to create the magic. This trick lets the inspector memorize a random card and point, after dealing cards into many piles, at the pile that has that card; the process of dealing cards and pointing a pile is repeatly performed; then, the chosen card will finally be at the given position. Since Martin Gardner's card trick and other related card tricks may not be practicable in some situations, it is interesting to find the conditions that make this card trick solvable as well as the ways to perform the trick. This card trick has 3 parameters: the number of piles, the number of cards in each pile and the number of rounds to restack the piles. In this project, we provide an instant program which can tell whether a Gardner's problem with given parameters is solvable or unsolvable. Moreover, for a solvable problem, all possible ways to perform the Gardner's trick are provided. Some anticipated conditions on the parameters that make the Gardner's problem solvable or unsolvable are also given.</p>
+            </div>
+            <div class="window-content">
+                <h5 class="topic">Martin Gardner's Card Trick</h5>
+                <p style="text-align:justify; text-indent:4em">
+                    In <i>Mathematics, Magic and Mystery</i>, Martin Gardner evolved Gergonne 3-pile problem to the 27-card trick.
+                    Playing the trick,
+                    let a spectator selects any card in a deck of 27 cards, memorizes it and shuffles the deck as much as desired.
+                </p>
+                <img class="gardner-img" src="/static/gardner1.png">
+                <p>
+                    The spactator will choose the position 1-27 of the deck. The magician create three face-up piles of nine cards by
+                    dealing the top cards respectively onto the left, middle, then right pile and repeating until all the cards are gone.
+
+                </p>
+                <img style="max-width:500px; padding:2%;" width="100%" src="/static/gardner2.png">
+                <p>
+                    Now, he gets 3 piles of cards. Next, the participant points to which pile contains the chosen card.
+
+                </p>
+                <img style="max-width:400px; padding:2%;" width="100%" src="/static/gardner3_2.gif">
+                <p>
+                    After that, the magician gather all those piles and put the chosen pile to the specific order.
+                    The problem involves distributing these cards with 3 piles and 3 times assembly.
+                Finally, the magician can make the desire position be the chosen card.</p>
+            </div>
+            <div class="window-content">
+                <h5 class="topic">Mathematics Behide 27-card Trick</h5>
+                <p style="text-align:justify; text-indent:4em">
+                    Performing the 27-card Gardner’s trick depends on base three arithmetic.
+                    First, we subtract the desired position chosen from the spectator by 1 and
+                    convert that resulting number into a three digit number in base 3. We will
+                    call this base-3 number a “code”. Next, we decode each digit in the code starting
+                    from right to left to perform the Gardner’s trick in each round by placing the
+                    indicated pile (from the spectator) in the interpreted position. If the digit is 0,
+                    the chosen pile goes on top (none above it); if it is 1, the chosen pile goes at the
+                    middle (one stack above it); if it is 2, the chosen pile goes at the bottom (two stacks above it).
+                    Performing the trick according to this strategy will finally bring the chosen card to the desired position.
+                    This table shows all corresponding pairs of desired positions and codes for performing.
+                </p>
+                <table class="gardner-table" style="width:100%; max-width: 600px; margin:auto;">
+                <tr>
+                <th>Position</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                </tr>
+                <tr>
+                <td>Code</th>
+                <td>000<sub>3</sub></td>
+                <td>001<sub>3</sub></td>
+                <td>002<sub>3</sub></td>
+                <td>010<sub>3</sub></td>
+                <td>011<sub>3</sub></td>
+                <td>012<sub>3</sub></td>
+                <td>020<sub>3</sub></td>
+                <td>021<sub>3</sub></td>
+                <td>022<sub>3</sub></td>
+                </tr>
+                <tr>
+                <th>Position</th>
+                <th>10</th>
+                <th>11</th>
+                <th>12</th>
+                <th>13</th>
+                <th>14</th>
+                <th>15</th>
+                <th>16</th>
+                <th>17</th>
+                <th>18</th>
+                </tr>
+                <td>Code</th>
+                <td>100<sub>3</sub></td>
+                <td>101<sub>3</sub></td>
+                <td>102<sub>3</sub></td>
+                <td>110<sub>3</sub></td>
+                <td>111<sub>3</sub></td>
+                <td>112<sub>3</sub></td>
+                <td>120<sub>3</sub></td>
+                <td>121<sub>3</sub></td>
+                <td>122<sub>3</sub></td>
+                </tr>
+                <tr>
+                <th>Position</th>
+                <th>19</th>
+                <th>20</th>
+                <th>21</th>
+                <th>22</th>
+                <th>23</th>
+                <th>24</th>
+                <th>25</th>
+                <th>26</th>
+                <th>27</th>
+                </tr>
+                <tr>
+                <td>Code</th>
+                <td>200<sub>3</sub></td>
+                <td>201<sub>3</sub></td>
+                <td>202<sub>3</sub></td>
+                <td>210<sub>3</sub></td>
+                <td>211<sub>3</sub></td>
+                <td>212<sub>3</sub></td>
+                <td>220<sub>3</sub></td>
+                <td>221<sub>3</sub></td>
+                <td>222<sub>3</sub></td>
+                </tr>
+                </table>
+            </div>
+            <div class="window-content">
+                <h5 class="topic">Some Definitions and Theorem</h5>
+                <img class="gardner-img" src="/static/gardner5.png">
+                <p style="text-align:left; text-indent:4em;">
+
+                <b>Definition</b> For a Gardner’s problem, we define parameters M, N, K as follows:<br>&emsp;
+                M is the number of dealing piles in each round,<br>&emsp;
+                N is the number of cards in each dealing pile, and <br>&emsp;
+                K is the number of dealing rounds.
+                </p>
+                <p style="text-align:left; text-indent:4em;">
+                    <b>Definition</b> For a Gardner’s problem with given parameters M, N, K, let x be the desired
+                    position chosen by a spectator at the beginning of the performance.
+                </p>
+            </div>
+            <div class="window-content">
+                <h5 class="topic">Our Program</h5>
+                <p style="text-align:justify; text-indent:4em">We make an instant program using Mathematica which can tell whether
+                a Gardner’s problem with given parameters is solvable or unsolvable. Moreover, for a solvable problem,
+                the program can show all possible ways to perform the Gardner’s trick.
+                </p>
+                <ol style="text-align:left">
+                    <li>Input parameters M, N, K.</li>
+                    <li>Check the conditions on parameters M, N, K.</li>
+                    <li>Create all possible M K codes to perform.</li>
+                    <li>Run a loop over all possible codes to find all usable codes.</li>
+                    <li>Classify usable and unusable codes using Corollary check whether I<sub>K</sub> = E<sub>K</sub> .</li>
+                    <li>Match each usable code to the corresponding desired position x = I<sub>K</sub> .</li>
+                    <li>Check whether the Gardner’s problem is solvable or not and show the result.</li>
+                </ol>
+                <img style="max-width:750px; padding:2%;" width="100%" src="/static/FlowChartAPAM.png">
+            </div>
+            <div class="window-content">
+                <h5 class="topic">Results</h5>
+                <p style="text-align:justify; text-indent:4em">
+                    <b>Example</b> For parameters M = 4, N = 13, K = 3, the Gardner’s problem is unsolvable.
+                    We can see that
+                    only position x = 1, 5, 9, 13, 14, 18, 22, 26, 27, 31, 35, 39, 40, 44, 48, 52 can be
+                    performed.
+                </p>
+                <img class="gardner-img" src="/static/4_13_3.png">
+                <p style="text-align:justify; text-indent:4em">
+                    <b>Example</b> For parameters M = 4, N = 13, K = 4, the Gardner’s problem is solvable.
+                    We can see that every desired position has corresponding codes to perform. Note that we
+                    can have more than one usable code for a desired position. For example, the desired position
+                    x = 33 has 4 usable codes which are 2200, 2201, 2132, 2133 in base-4.
+                </p>
+                <img class="gardner-img" src="/static/4_13_4.png">
+            </div>
+            <div class="window-content">
+                <h5 class="topic">Conclusion</h5>
+                <p style="text-align:justify; text-indent:4em">
+                    In this work, we provide an instant program as a tool to study Gardner’s problem.
+                    The program can tell whether a Gardner’s problem with given parameters is solvable or
+                    unsolvable. For a solvable problem, all possible ways to perform the Gardner’s trick
+                    are also provided. We also simulate some experiments of the Gardner’s problem with
+                    some parameters M, N, K. From the result, for any M, N, K ∈ N, M ≥ 2, we can conclude
+                    conditions for the parameters that make the Gardner’s problem solvable or unsolvable as follows.
+                </p>
+                <p style="text-align:left;">
+                <ol>
+                    <li style="text-align:left; padding-bottom: 8px">N > M<sup>K−1</sup>
+                    The Gardner’s problem is unsolvable. We conjecture that the number of unusable positions in
+                    each case is MN.</li>
+                    <li style="text-align:left; padding-bottom: 8px">N = M<sup>K−1</sup>
+                    Gardner’s problem is solvable. Furthermore, we know a way to perform the desired position x
+                    by converting x − 1 to base M as a K digit performing code.</li>
+                    <li style="text-align:left;">N < M<sup>K−1</sup>. From our experiments, we conjecture the following results.
+                        <ul>
+                        <li style="text-align:left;padding-bottom: 8px; padding-top: 10px">
+                            If N = M<sup>K−1</sup> − 1, then the Gardner’s problem is unsolvable. Moreover, the
+                            number of unusable positions in such case is M(M<sup>K−1</sup> − 3), for every M<sup>K−1</sup> ≥ 3.
+                        </li>
+                        <li style="text-align:left;">
+                            If M is an even number and N ≤ <div class="frac">
+                                <span>M<sup>K−1</sup></span>
+                                <span class="symbol">/</span>
+                                <span class="bottom">2</span>
+
+                            </div> , then the Gardner’s problem is solvable.
+                        </li>
+                        <li style="text-align:left;">
+                            If M is an odd number and N ≤ <div class="floor"><div class="floor2"><div class="frac">
+                                <span>M<sup>K−1</sup></span>
+                                <span class="symbol">/</span>
+                                <span class="bottom">2</span>
+
+                            </div></div></div> + 1, then the Gardner’s problem is solvable.
+                            Moreover, if M is divisible by 3 and N ≤ <div class="floor"><div class="floor2"><div class="frac">
+                                <span>M<sup>K−1</sup></span>
+                                <span class="symbol">/</span>
+                                <span class="bottom">2</span>
+
+                            </div></div></div> + 2, then the Gardner’s problem is solvable.
+                        </li>
+                        </ul>
+                    </li>
+                </ol>
+                </p>
+                <img class="gardner-img" src="/static/gardner6.png">
+            </div>
+            <div class="window-content">
+                <h5 class="topic">Discussion</h5>
+                <p style="text-align:left; text-indent:4em; display: inline-block;"> For&nbsp;
+                    <div class="floor">
+                        <div class="floor2">
+                            <div class="frac">
+                                <span>M<sup>K−1</sup></span>
+                                <span class="symbol">/</span>
+                                <span class="bottom">2</span>
+                            </div>
+                        </div>
+                    </div>
+                    < N < M<sup>K−1</sup>, most sets of parameters M, N, Kare unsolvable.
+                    However,
+                    there are some interesting cases that are solvable. The relationship
+                    condition that makes those sets of parameters solvable still remains
+                    open for future works.</p>
+                <img class="gardner-img" src="/static/gardner7.png">
+                <p style="text-align:justify; text-indent:4em">
+                    Although we have an easy way to perform the Gardner’s trick for a deck
+                    of size n<sup>k</sup>, we did not study about how to perform the trick for a person
+                    in real life when we actually get the desired position from a spectator,
+                    since we need a computer to tell us the code to perform. We hope that this instant program and our anticipated
+                    conditions can be useful to study the Gardner’s problem in future works.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="space">
+        <a href="/project"><button class="btn btn-give">Back to Project</button></a>
+    </div>
+</div>
+
+
+
+<script>
+function isOK(str) {
+        if (!str || str.length === 0) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+function validateForm() {
+        let invalid = document.querySelectorAll(".invalid");
+        let field = document.querySelectorAll(".form-control");
+        let check = true;
+        for (let i = 0; i < field.length; i++) {
+            let x = field[i].value;
+            if (!isOK(x.trim())) {
+                invalid[i].innerHTML = "<span style='color: #e94040;font-weight: lighter;'>*required</span>";
+                check = false;
+            }
+        }
+        for (let i = 0; i < field.length; i++) {
+            let x = field[i].value;
+            if (isOK(x.trim())) {
+                invalid[i].innerHTML = "";
+            }
+        }
+        let m = document.getElementById("m").value;
+        let k = document.getElementById("k").value;
+        let detect = document.getElementById("detect");
+        if (m ** k > 10 ** 6) {
+            detect.innerHTML = "<span style='color: #e94040;font-weight: lighter;'>*The set of parameter is too big</span>";
+            check = false;
+        }
+        else {
+            detect.innerHTML = "";
+        }
+        if (check == true) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+</script>
+
+<script>
+    $(document).ready(function(){
+  if(window.innerWidth < 768){
+    $('.hide').removeClass('p-5');
+  }
+});
+
+$(window).resize(function(){
+  if(window.innerWidth < 768){
+      $('.hide').removeClass('p-5');
+
+  }else{
+    $('.hide').addClass('p-5');
+  }
+});
+
+</script>
+</main>
+{% endblock %}

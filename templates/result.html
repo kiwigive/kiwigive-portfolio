@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Result
+{% endblock %}
+
+{% block main %}
+<main class="container p-5" height="100vh">
+<div class="result text-brown">
+    <div class="result-container">
+    <p>M = {{m}}, N = {{n}}, K = {{k}}: {{data[0]}}</p>
+    </div>
+    <div class="table-container">
+    <table class="result-table table table-striped">
+        <thead>
+            <tr>
+                <th>Position</th>
+                <th>Code</th>
+            </tr>
+        </thead>
+        <tbody id="row">
+
+        </tbody>
+    </table>
+    </div>
+
+    <script>
+        var position = {{data[1]|tojson}};
+        var code = {{data[2]|tojson}};
+        var x ="", i, y = "";
+        for (i=1; i<position.length; i++) {
+            x = "<tr>" + x + "<td>" + position[i] +"</td>"+ y+"<td>" + code[i] + "</td>" + "</tr>";
+        }
+        document.getElementById("row").innerHTML = x;
+    </script>
+        <script>
+            window.alert("{{data[0]}}");
+        </script>
+</div>
+</main>
+
+{% endblock %}

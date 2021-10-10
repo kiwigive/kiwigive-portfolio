@@ -1,0 +1,940 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    About
+{% endblock %}
+
+{% block main %}
+<main>
+<div class="about">
+
+    <!--slideshow-->
+    <div class="banner container p-5">
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img src="/static/banner_img1.png" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="/static/banner_img2.png" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="/static/banner_img3.png" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="/static/banner_img4.png" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="/static/banner_img5.png" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="/static/banner_img6.png" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)"><span class="button-slide">&#10094;</span></a>
+            <a class="next" onclick="plusSlides(1)"><span class="button-slide">&#10095;</span></a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="section-about" id="resume">
+            <div class="container p-5">
+                <h3 class="topic">Who I am?</h3>
+                <p>My name is Athisa Laungvarunyoo, or Kiwigive, that is my nickname.</p>
+                <p>I am a little girl with 5 feet tall who have a blissful smile and I have always been told I am so full of beans.</p>
+                <p>I am graduated of Mathematics with high logical thinking and have many years experienced of part-time bringing forth a motivated attitude with a variety of powerful skills. </p>
+                <p>I'm looking for a role where I can grow and continue to learn from other experienced team members.</p>
+
+                <div class="space"></div>
+                <p><b>Concisely, you may review my resume that I have attached.</b></p>
+
+
+
+                <button id="myImg" class="btn btn-give"><i class="fas fa-search"></i> Resume</button>
+                <div id="myModal" class="modal">
+                    <div id="sec">
+                    <a href="/static/logo_small.png" download="Athisa Resume" title="Download PDF" id="download"><i class="fas fa-download"></i></a>
+                    <span title="Close" class="close">&times;</span>
+                    </div>
+                    <img class="modal-content" id="img01">
+                    <div class="space"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hi"></div>
+    <!-- start timeline -->
+    <div class="timeline">
+        <div class="container-tl left">
+            <div class="date">15 Dec</div>
+            <i class="icon fa fa-child"></i>
+            <div class="content bg-yellow">
+                <h5>Grade 1 - Grade 3</h5>
+                <p>Chonprathanwittaya School</p>
+            </div>
+        </div>
+        <div class="container-tl right">
+            <div class="date">22 Oct</div>
+            <i class="icon fa fa-pencil-alt"></i>
+            <div class="content bg-yellow">
+                <h5>Grade 4 - Grade 6</h5>
+                <p>Anuban Yuwawittaya School</p>
+            </div>
+        </div>
+        <div class="container-tl left">
+            <div class="date">15 Dec</div>
+            <i class="icon fa fa-book-open"></i>
+            <div class="content bg-yellow">
+                <h5>Middle School</h5>
+                <p>The Demonstration School of Thepsatri Rajabhat University</p>
+            </div>
+        </div>
+        <div class="container-tl right">
+            <div class="date">22 Oct</div>
+            <i class="icon fa fa-book"></i>
+            <div class="content bg-yellow">
+                <h5>High School</h5>
+                <p>Suankularb Wittayalai Nonthaburi School</p>
+            </div>
+        </div>
+        <div class="container-tl left">
+            <div class="date">15 Dec</div>
+            <i class="icon fa fa-graduation-cap"></i>
+            <div class="content bg-yellow">
+                <h5>B.Sc. Mathematics</h5>
+                <p>Chulalongkorn University</p>
+            </div>
+        </div>
+    </div>
+    <!-- end timeline -->
+
+    <!-- Start skill -->
+<div class="container p-5">
+<div class="row">
+<div class="skill-container col-xs-12 col-sm-12 col-lg-6 col-md-6 ">
+    <div class="skill-top">
+          <h3 class="topic">&lt;/SKILL&gt;</h3>
+    </div>
+
+    <div class="skill-body">
+        <div title="python" class="skill-inline">
+            <img  class="img-skill lazy" data-src="/static/python.png">
+            <div class="guage-container">
+                <div class="progress">
+                    <div class="progress-bar-g progress-bar-striped" role="progressbar" style="width: 75%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+        <div title="C" class="skill-inline">
+            <img class="img-skill lazy" data-src="/static/c.png">
+            <div class="guage-container">
+                <div class="progress">
+                    <div class="progress-bar-b progress-bar-striped" role="progressbar" style="width: 60%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+        <div title="HTML" class="skill-inline">
+            <img class="img-skill lazy" data-src="/static/HTML.png">
+            <div class="guage-container">
+                <div class="progress">
+                    <div class="progress-bar-g progress-bar-striped" role="progressbar" style="width: 50%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+        <div title="CSS" class="skill-inline">
+            <img class="img-skill lazy" data-src="/static/CSS.png">
+            <div class="guage-container">
+                <div class="progress">
+                    <div class="progress-bar-b progress-bar-striped" role="progressbar" style="width: 50%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+        <div title="JavaScript" class="skill-inline">
+            <img class="img-skill lazy" data-src="/static/JS.png">
+            <div class="guage-container">
+                <div class="progress">
+                    <div class="progress-bar-g progress-bar-striped" role="progressbar" style="width: 40%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="skill-container col-xs-12 col-sm-12 col-lg-6 col-md-6">
+    <div class="skill-top">
+          <h3 class="topic">LANGUAGE</h3>
+    </div>
+
+    <div class="skill-body">
+        <div title="Thai: Native" class="skill-inline">
+            <img class="img-lan lazy" data-src="/static/thai.png">
+            <div class="guage-container">
+                <div class="progress">
+                    <div class="progress-bar-g progress-bar-striped" role="progressbar" style="width: 100%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" data-label="Native"></div>
+                </div>
+            </div>
+            <span class="native">Native</span>
+        </div>
+        <div title="English: Upper Intermidiate" class="skill-inline">
+            <img class="img-lan lazy" data-src="/static/english.png">
+            <div class="guage-container">
+                <div class="progress">
+                    <div class="progress-bar-b progress-bar-striped" role="progressbar" style="width: 75%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+        <div title="Chinese: Beginner" class="skill-inline">
+            <img class="img-lan lazy" data-src="/static/chinese.png">
+            <div class="guage-container">
+                <div class="progress">
+                    <div class="progress-bar-g progress-bar-striped" role="progressbar" style="width: 35%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+        <div title="Japanese: Beginner" class="skill-inline">
+            <img class="img-lan lazy" data-src="/static/japanese.png">
+            <div class="guage-container">
+                <div class="progress">
+                    <div class="progress-bar-b progress-bar-striped" role="progressbar" style="width: 30%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="hi"></div>
+<div class="container-content-left bg-white">
+    <div class="content-inner-left container p-5">
+        <h3><span class="topic">EXPERIENCES </span><span class="aa"> (Part-time and Exchange Program)</span></h3>
+        <div style="padding-top:1.5vh"></div>
+        <div>
+            <h5 onclick="myFunction(this.id)" class="exp" id="5"><i class="fas fa-caret-down" id="work5"></i>  Freelance Mathematics Tutor</h5>
+            <p>Jul 2017 - Present</p>
+            <div class="myDIV" id="myDIV5" style="display:none">
+                <li class="expli">Tutored K-12 students in a variety of academic subjects.</li>
+                <li class="expli">Worked with K-12 students on their foundations of math through personalized set of discussions, assignment, and assessments.</li>
+                <li class="expli">SAT/GED/IGCSE mathematics-Tutored, Pre-Algebra, Algebra I and II, Geometry-Tutored for international students in grades 6-12.</li>
+            </div>
+        </div>
+        <div>
+            <h5 onclick="myFunction(this.id)" class="exp" id="1"><i class="fas fa-caret-down" id="work1"></i>  Server: Work and Travel USA</h5>
+            <p>Jun 2019 - Sep 2019&emsp;<i class="fas fa-map-marker-alt"></i>  Florida, USA</p>
+            <div class="myDIV" id="myDIV1" style="display:none">
+                <li class="expli">Worked passionately in customer service in a high-volume restaurant.</li>
+                <li class="expli">Served as a friendly, hardworking, and punctual employee.</li>
+                <li class="expli">Maintained a high tip average thanks to consistent customer satisfaction.</li>
+            </div>
+        </div>
+        <div>
+            <h5 onclick="myFunction(this.id)" class="exp" id="2"><i class="fas fa-caret-down" id="work2"></i>  Leader Waitress: MAIDREAMIN(THAILAND) COMPANY LIMITED</h5>
+            <p>Mar 2017 - Mar 2018&emsp;<i class="fas fa-map-marker-alt"></i>  Bangkok, Thailand</p>
+            <div class="myDIV" id="myDIV2" style="display:none">
+                <li class="expli">Utilized excellent leadership and organizational skills to achieve goals.
+                Worked well independently and as a team leader to solve problems.</li>
+                <li class="expli">Organized and implemented job roles and functions among employees.</li>
+                <li class="expli">Led sales department with highest quarterly sales for two consecutive years. Identified and maximized sales opportunities, and increased customer retention rates.</li>
+                <li class="expli">Got the best employee of the year award, the best teamwork of the year award, and the best leadership of the year award.</li>
+            </div>
+        </div>
+        <div>
+            <h5 onclick="myFunction(this.id)" class="exp" id="3"><i class="fas fa-caret-down" id="work3"></i>  Management Waitress: MAIDREAMIN(THAILAND) COMPANY LIMITED</h5>
+            <p>Mar 2016 - Mar 2017&emsp;<i class="fas fa-map-marker-alt"></i>  Bangkok, Thailand</p>
+            <div class="myDIV" id="myDIV3" style="display:none">
+                <li class="expli">Organized work to complete assignments in a timely, efficient manner. Created powerful sale strategies resulting in an increase of sales.</li>
+                <li class="expli">Led recruitment efforts and training of new employees.</li>
+                <li class="expli">Established and maintained advantageous working relationships.</li>
+                <li class="expli">Got the represented employee of the year award.</li>
+            </div>
+        </div>
+        <div>
+            <h5 onclick="myFunction(this.id)" class="exp" id="4"><i class="fas fa-caret-down" id="work4"></i>  Waitress: MAIDREAMIN(THAILAND) COMPANY LIMITED</h5>
+            <p>Feb 2015 - May 2016&emsp;<i class="fas fa-map-marker-alt"></i>  Bangkok, Thailand</p>
+            <div class="myDIV" id="myDIV4" style="display:none">
+                <li class="expli">Served as a positive and enthusiastic team player.</li>
+                <li class="expli">Worked with a keen understanding of marketing operations and campaign efforts.</li>
+                <li class="expli">Got the outstanding new face employee of the year award.</li>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="hi"></div>
+<div class="container-content-right bg-brown" id="theotherside">
+    <div class="content-inner-right container p-5">
+        <h3 class="topic">THE OTHER SIDE</h3>
+        <div style="padding-top:1.5vh"></div>
+        <div class="other row">
+
+        <div class="center col-lg-5 col-md-12 col-sm-12" width="100%">
+            <div class="gal-container" onclick="openModal5();currentSlide5(1)">
+                <img id="gal" class="gal lazy" data-src="/static/DB/DB1.jpeg" width="85%">
+                <div class="middle">
+                    <div class="middle-text2"><i class="fas fa-search"></i> More Image</div>
+                </div>
+            </div>
+        </div>
+
+                <div id="myModal5" class="modal5">
+                    <span class="close5 cursor5" onclick="closeModal5()">&times;</span>
+                    <div class="modal-content5">
+
+                        <div class="mySlides5">
+                            <div class="numbertext5">1 / 7</div>
+                            <img data-src="/static/DB/DB1.jpeg" class="img-slide lazy_load">
+                        </div>
+
+                        <div class="mySlides5">
+                            <div class="numbertext5">2 / 7</div>
+                            <img data-src="/static/DB/DB2.jpeg" class="img-slide lazy_load">
+                        </div>
+
+                        <div class="mySlides5">
+                            <div class="numbertext5">3 / 7</div>
+                            <img data-src="/static/DB/DB3_2.jpeg" class="img-slide lazy_load">
+                        </div>
+
+                        <div class="mySlides5">
+                            <div class="numbertext5">4 / 7</div>
+                            <img data-src="/static/DB/DB4.jpg" class="img-slide lazy_load">
+                        </div>
+
+                        <div class="mySlides5">
+                            <div class="numbertext5">5 / 7</div>
+                            <img data-src="/static/DB/DB5.jpg" class="img-slide lazy_load">
+                        </div>
+
+                        <div class="mySlides5">
+                            <div class="numbertext5">6 / 7</div>
+                            <img data-src="/static/DB/DB6.jpg" class="img-slide lazy_load">
+                        </div>
+
+                        <div class="mySlides5">
+                            <div class="numbertext5">7 / 7</div>
+                            <img data-src="/static/DB/DB7.jpg" class="img-slide lazy_load">
+                        </div>
+
+                        <a class="prev5" onclick="plusSlides5(-1)">&#10094;</a>
+                        <a class="next5" onclick="plusSlides5(1)">&#10095;</a>
+
+
+                        <div class="column5">
+                            <img class="demo5 cursor5 lazy_load" data-src="/static/DB/DB1.jpeg" style="width:100%" onclick="currentSlide5(1)">
+                        </div>
+                        <div class="column5">
+                            <img class="demo5 cursor5 lazy_load" data-src="/static/DB/DB2.jpeg" style="width:100%" onclick="currentSlide5(2)">
+                        </div>
+                        <div class="column5">
+                            <img class="demo5 cursor5 lazy_load" data-src="/static/DB/DB3_2.jpeg" style="width:100%" onclick="currentSlide5(3)">
+                        </div>
+                        <div class="column5">
+                            <img class="demo5 cursor5 lazy_load" data-src="/static/DB/DB4.jpg" style="width:100%" onclick="currentSlide5(4)">
+                        </div>
+                        <div class="column5">
+                            <img class="demo5 cursor5 lazy_load" data-src="/static/DB/DB5.jpg" style="width:100%" onclick="currentSlide5(5)">
+                        </div>
+                        <div class="column5">
+                            <img class="demo5 cursor5 lazy_load" data-src="/static/DB/DB6.jpg" style="width:100%" onclick="currentSlide5(6)">
+                        </div>
+                        <div class="column5">
+                            <img class="demo5 cursor5 lazy_load" data-src="/static/DB/DB7.jpg" style="width:100%" onclick="currentSlide5(7)">
+                        </div>
+                    </div>
+                </div>
+            <div class="col-lg-7 col-md-12 col-sm-12">
+                <h5 class="topic">Play game until I win &#x2665;</h5>
+                <p>
+                    <li>Won the 1<sup>st</sup> place: The Danz Base Asia Cup 2018</li>
+                    <li>Won the 3<sup>rd</sup> runner-up: The Danz Base Asia Cup 2016</li>
+                    <li>Won the 2<sup>nd</sup> runner-up: The Danz Base Asia Cup 2015</li>
+                </p>
+                <p>
+                    This is the first one of my proudly present story. I am 3 years consecutive Thailand representing in the Danz Base Asia Cup competition.
+                    Danz Base is a dance and music arcade.
+                <p>
+                I was playing Danz Base as my hobby. Then, I heard about the competition. Due to my nature, I always give the best of myself.
+                    A few country representative was qualified from hundreds of players to be 22 players of Asia Cup competitors.</p>
+                <p>By hard working and 3 years of indomitable spirit, I am finally the winner!!
+                    I got a lot of invaluable experiences. This event always remind me that "all efforts will be rewarded".
+                </p>
+            </div>
+
+
+        </div>
+        <div class="end"></div>
+        <div class="other row">
+
+            <div class="center col-lg-5 col-md-12 col-sm-12 order-lg-2" width="100%">
+                <div class="gal-container" onclick="openModal4();currentSlide4(1)">
+                <img id="gal" class="gal lazy" data-src="/static/maid/maid1.jpg" width="85%">
+                <div class="middle">
+                    <div class="middle-text2"><i class="fas fa-search"></i> More Image</div>
+                </div>
+            </div>
+            </div>
+
+                <div id="myModal4" class="modal4">
+                    <span class="close4 cursor4" onclick="closeModal4()">&times;</span>
+                    <div class="modal-content4">
+
+                        <div class="mySlides4">
+                            <div class="numbertext4">1 / 7</div>
+                            <img data-src="/static/maid/maid1.jpg" class="img-slide lazy_load">
+                        </div>
+
+                        <div class="mySlides4">
+                            <div class="numbertext4">2 / 7</div>
+                            <img data-src="/static/maid/maid2.jpg" class="img-slide lazy_load">
+                        </div>
+
+                        <div class="mySlides4">
+                            <div class="numbertext4">3 / 7</div>
+                            <img data-src="/static/maid/maid3.JPG" class="img-slide lazy_load">
+                        </div>
+                        <div class="mySlides4">
+                            <div class="numbertext4">4 / 7</div>
+                            <img data-src="/static/maid/maid4.jpg" class="img-slide lazy_load">
+                        </div>
+
+                        <div class="mySlides4">
+                            <div class="numbertext4">5 / 7</div>
+                            <img data-src="/static/maid/maid5.jpg" class="img-slide lazy_load">
+                        </div>
+
+                        <div class="mySlides4">
+                            <div class="numbertext4">6 / 7</div>
+                            <img data-src="/static/maid/maid6.jpg" class="img-slide lazy_load">
+                        </div>
+                        <div class="mySlides4">
+                            <div class="numbertext4">7 / 7</div>
+                            <img data-src="/static/maid/maid7.jpg" class="img-slide lazy_load">
+                        </div>
+
+                        <a class="prev4" onclick="plusSlides4(-1)">&#10094;</a>
+                        <a class="next4" onclick="plusSlides4(1)">&#10095;</a>
+
+
+                        <div class="column4">
+                            <img class="demo4 cursor4 lazy_load" data-src="/static/maid/maid1.jpg" style="width:100%" onclick="currentSlide4(1)">
+                        </div>
+                        <div class="column4">
+                            <img class="demo4 cursor4 lazy_load" data-src="/static/maid/maid2.jpg" style="width:100%" onclick="currentSlide4(2)">
+                        </div>
+                        <div class="column4">
+                            <img class="demo4 cursor4 lazy_load" data-src="/static/maid/maid3.JPG" style="width:100%" onclick="currentSlide4(3)">
+                        </div>
+                        <div class="column4">
+                            <img class="demo4 cursor4 lazy_load" data-src="/static/maid/maid4.jpg" style="width:100%" onclick="currentSlide4(4)">
+                        </div>
+                        <div class="column4">
+                            <img class="demo4 cursor4 lazy_load" data-src="/static/maid/maid5.jpg" style="width:100%" onclick="currentSlide4(5)">
+                        </div>
+                        <div class="column4">
+                            <img class="demo4 cursor4 lazy_load" data-src="/static/maid/maid6.jpg" style="width:100%" onclick="currentSlide4(6)">
+                        </div>
+                        <div class="column4">
+                            <img class="demo4 cursor4 lazy_load" data-src="/static/maid/maid7.jpg" style="width:100%" onclick="currentSlide4(7)">
+                        </div>
+                    </div>
+                </div>
+            <div class="col-lg-7 col-md-12 col-sm-12 order-lg-1">
+                <h5 class="topic">Unique Part-time Job &#x2665;</h5>
+                <p>
+                    I started working here since I just finished high school. I have been working, while I was an undergraduate. It is quite challenge, quite fun, and extremely exhausted.
+                </p>
+                <p>
+                    You can see all of my responsibility in an above section. This restuarent is a maid cafe theme, that we call custumers master and mistress.
+                    All waitress have a code name, a new character and dress in very cute maid uniform. I have been working here for 3 years,
+                    started from a trainee to a leader position.
+                </p>
+                <p>
+                    I have to admit that it is a high-pressure and competitive environment. I have learned a lot about the business world. Although the effort is important, achieve the goals are measurable.
+                    I am a good potential employee, garuntee by 5 awards I have got. Nobody ever got 5 awards so far.
+                </p>
+                <p>
+                    This place will remain imprinted in me forever. My style and hobby still influeneced by this job.
+                    It is a good opportunity to meet people from diverse backgrounds and I met a lot of friends here.
+                </p>
+            </div>
+        </div>
+        <div class="end"></div>
+        <div class="other row">
+
+            <div class="center col-lg-5 col-md-12 col-sm-12" width="100%">
+                <div class="gal-container" onclick="openModal3();currentSlide3(1)">
+                <img id="gal" class="gal lazy" data-src="/static/idol/idol1.JPG" width="85%">
+                <div class="middle">
+                    <div class="middle-text2"><i class="fas fa-search"></i> More Image</div>
+                </div>
+            </div>
+            </div>
+
+                <div id="myModal3" class="modal3">
+                    <span class="close3 cursor3" onclick="closeModal3()">&times;</span>
+                    <div class="modal-content3">
+
+                        <div class="mySlides3">
+                            <div class="numbertext3">1 / 7</div>
+                            <img data-src="/static/idol/idol1.JPG" class="img-slide lazy_load">
+                        </div>
+
+                        <div class="mySlides3">
+                            <div class="numbertext3">2 / 7</div>
+                            <img data-src="/static/idol/idol2.jpeg" class="img-slide lazy_load">
+                        </div>
+
+                        <div class="mySlides3">
+                            <div class="numbertext3">3 / 7</div>
+                            <img data-src="/static/idol/idol3.jpeg" class="img-slide lazy_load">
+                        </div>
+                        <div class="mySlides3">
+                            <div class="numbertext3">4 / 7</div>
+                            <img data-src="/static/idol/idol4.jpg" class="img-slide lazy_load">
+                        </div>
+
+                        <div class="mySlides3">
+                            <div class="numbertext3">5 / 7</div>
+                            <img data-src="/static/idol/idol5.jpg" class="img-slide lazy_load">
+                        </div>
+
+                        <div class="mySlides3">
+                            <div class="numbertext3">6 / 7</div>
+                            <img data-src="/static/idol/idol6.jpeg" class="img-slide lazy_load">
+                        </div>
+                        <div class="mySlides3">
+                            <div class="numbertext3">7 / 7</div>
+                            <img data-src="/static/idol/idol7.jpg" class="img-slide lazy_load">
+                        </div>
+
+                        <a class="prev3" onclick="plusSlides3(-1)">&#10094;</a>
+                        <a class="next3" onclick="plusSlides3(1)">&#10095;</a>
+
+
+                        <div class="column3">
+                            <img class="demo3 cursor3 lazy_load" data-src="/static/idol/idol1.JPG" style="width:100%" onclick="currentSlide3(1)">
+                        </div>
+                        <div class="column3">
+                            <img class="demo3 cursor3 lazy_load" data-src="/static/idol/idol2.jpeg" style="width:100%" onclick="currentSlide3(2)">
+                        </div>
+                        <div class="column3">
+                            <img class="demo3 cursor3 lazy_load" data-src="/static/idol/idol3.jpeg" style="width:100%" onclick="currentSlide3(3)">
+                        </div>
+                        <div class="column3">
+                            <img class="demo3 cursor3 lazy_load" data-src="/static/idol/idol4.jpg" style="width:100%" onclick="currentSlide3(4)">
+                        </div>
+                        <div class="column3">
+                            <img class="demo3 cursor3 lazy_load" data-src="/static/idol/idol5.jpg" style="width:100%" onclick="currentSlide3(5)">
+                        </div>
+                        <div class="column3">
+                            <img class="demo3 cursor3 lazy_load" data-src="/static/idol/idol6.jpeg" style="width:100%" onclick="currentSlide3(6)">
+                        </div>
+                        <div class="column3">
+                            <img class="demo3 cursor3 lazy_load" data-src="/static/idol/idol7.jpg" style="width:100%" onclick="currentSlide3(7)">
+                        </div>
+                    </div>
+                </div>
+            <div class="col-lg-7 col-md-12 col-sm-12">
+                <h5 class="topic">For someday, let's be an Idol &#x2665;</h5>
+                <p>
+                    I love dancing and singing. Once, I got an opportunity to be participated in an idol girl group. Well, it is called idols.
+                    According to japanese idol culture, idols are marketed for their image, attractiveness, and personalities. They are seen as role models of attemps.
+                </p>
+                <p>
+                    I am quite an introvert. Doing this role make me got out from my comfort zone. Being an idol is like a 24-hour work.
+                    However, it is a really good experience.
+                </p>
+                <p>
+                    I met a lot of people. It is such a weired relationship, but nice, I think. I, as an idol, give the happiness and in return,
+                    I recieve fans supporting.
+                </p>
+            </div>
+        </div>
+        <div class="end"></div>
+        <div class="other row">
+
+            <div class="center col-lg-5 col-md-12 col-sm-12 order-lg-2" width="100%">
+                <div class="gal-container" onclick="openModal2();currentSlide2(1)">
+                <img id="gal" class="gal lazy" data-src="/static/model/model1.jpg" width="85%">
+                <div class="middle">
+                    <div class="middle-text2"><i class="fas fa-search"></i> More Image</div>
+                </div>
+            </div>
+            </div>
+
+                <div id="myModal2" class="modal2">
+                    <span class="close2 cursor2" onclick="closeModal2()">&times;</span>
+                    <div class="modal-content2">
+
+                        <div class="mySlides2">
+                            <div class="numbertext2">1 / 7</div>
+                            <img data-src="/static/model/model1.jpg" class="img-slide lazy_load">
+                        </div>
+
+                        <div class="mySlides2">
+                            <div class="numbertext2">2 / 7</div>
+                            <img data-src="/static/model/model2.jpg" class="img-slide lazy_load">
+                        </div>
+
+                        <div class="mySlides2">
+                            <div class="numbertext2">3 / 7</div>
+                            <img data-src="/static/model/model3.jpg" class="img-slide lazy_load">
+                        </div>
+                        <div class="mySlides2">
+                            <div class="numbertext2">4 / 7</div>
+                            <img data-src="/static/model/model4.JPG" class="img-slide lazy_load">
+                        </div>
+
+                        <div class="mySlides2">
+                            <div class="numbertext2">5 / 7</div>
+                            <img data-src="/static/model/model5.jpg" class="img-slide lazy_load">
+                        </div>
+
+                        <div class="mySlides2">
+                            <div class="numbertext2">6 / 7</div>
+                            <img data-src="/static/model/model6.jpg" class="img-slide lazy_load">
+                        </div>
+                        <div class="mySlides2">
+                            <div class="numbertext2">7 / 7</div>
+                            <img data-src="/static/model/model7.jpg" class="img-slide lazy_load">
+                        </div>
+
+                        <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+                        <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+
+
+                        <div class="column2">
+                            <img class="demo2 cursor2 lazy_load" data-src="/static/model/model1.jpg" style="width:100%" onclick="currentSlide2(1)">
+                        </div>
+                        <div class="column2">
+                            <img class="demo2 cursor2 lazy_load" data-src="/static/model/model2.jpg" style="width:100%" onclick="currentSlide2(2)">
+                        </div>
+                        <div class="column2">
+                            <img class="demo2 cursor2 lazy_load" data-src="/static/model/model3.jpg" style="width:100%" onclick="currentSlide2(3)">
+                        </div>
+                        <div class="column2">
+                            <img class="demo2 cursor2 lazy_load" data-src="/static/model/model4.JPG" style="width:100%" onclick="currentSlide2(4)">
+                        </div>
+                        <div class="column2">
+                            <img class="demo2 cursor2 lazy_load" data-src="/static/model/model5.jpg" style="width:100%" onclick="currentSlide2(5)">
+                        </div>
+                        <div class="column2">
+                            <img class="demo2 cursor2 lazy_load" data-src="/static/model/model6.jpg" style="width:100%" onclick="currentSlide2(6)">
+                        </div>
+                        <div class="column2">
+                            <img class="demo2 cursor2 lazy_load" data-src="/static/model/model7.jpg" style="width:100%" onclick="currentSlide2(7)">
+                        </div>
+                    </div>
+                </div>
+            <div class="col-lg-7 col-md-12 col-sm-12 order-lg-1">
+                <h5 class="topic">I am a model and dancer &#x2665;</h5>
+                <p>
+                    Since I was an idol, I have to upload my portrait picture frequently. It is just a routine. Before I realize it,
+                    I love to post a beautiful image everyday. In my freetime, I often drees up and go out for shooting.
+                    Actually, I don't like to wear make up, but being a model is a good opportunity to feel a bit more prettier, haha.
+                </p>
+                <p>
+                    Dancing is the hobby that I love the most. I started dancing because of dance arcade. After that, I take a serius dancing class.
+                    I love Jazz Funk Style. Moreover, I do a dance cover for Japanese idol groups. Doing the thing I love to do with friends is the best &#x2665;&#x2665;&#x2665;
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="end"></div>
+
+</div>
+
+<script>
+    $(document).ready(function(){
+  if(window.innerWidth < 600){
+    $('.banner').removeClass('p-5');
+  }
+});
+
+$(window).resize(function(){
+  if(window.innerWidth < 600){
+      $('.banner').removeClass('p-5');
+
+  }else{
+    $('.banner').addClass('p-5');
+  }
+});
+
+</script>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+$("#myImg").one("click", function () {
+    modalImg.src = "/static/logo_small.png";
+});
+
+img.onclick = function() {
+    modal.style.display = "block";
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+var download = document.getElementById("download");
+modal.onclick = function(event) {
+    if (event.target != download) {
+        if (event.target != modalImg) {
+            modal.style.display = "none";
+    }}
+    else {
+        return;
+    }
+}
+
+$(document).keyup(function(e) {
+     if (e.key === "Escape") {
+        modal.style.display = "none";
+        document.getElementById("myModal5").style.display = "none";
+        document.getElementById("myModal4").style.display = "none";
+        document.getElementById("myModal3").style.display = "none";
+        document.getElementById("myModal2").style.display = "none";
+    }
+});
+
+</script>
+
+<script>
+function openModal5() {
+  document.getElementById("myModal5").style.display = "block";
+}
+
+function closeModal5() {
+  document.getElementById("myModal5").style.display = "none";
+}
+
+var slideIndex5 = 1;
+showSlides5(slideIndex5);
+
+function plusSlides5(n) {
+  showSlides5(slideIndex5 += n);
+}
+
+function currentSlide5(n) {
+  showSlides5(slideIndex5 = n);
+}
+
+function showSlides5(n) {
+  var i;
+  var slides5 = document.getElementsByClassName("mySlides5");
+  var dots5 = document.getElementsByClassName("demo5");
+  if (n > slides5.length) {slideIndex5 = 1}
+  if (n < 1) {slideIndex5 = slides5.length}
+  for (i = 0; i < slides5.length; i++) {
+      slides5[i].style.display = "none";
+  }
+  for (i = 0; i < dots5.length; i++) {
+      dots5[i].className = dots5[i].className.replace(" active", "");
+  }
+  slides5[slideIndex5-1].style.display = "block";
+  dots5[slideIndex5-1].className += " active";
+}
+</script>
+
+<script>
+function openModal4() {
+  document.getElementById("myModal4").style.display = "block";
+}
+
+function closeModal4() {
+  document.getElementById("myModal4").style.display = "none";
+}
+
+var slideIndex4 = 1;
+showSlides4(slideIndex4);
+
+function plusSlides4(n) {
+  showSlides4(slideIndex4 += n);
+}
+
+function currentSlide4(n) {
+  showSlides4(slideIndex4 = n);
+}
+
+function showSlides4(n) {
+  var i;
+  var slides4 = document.getElementsByClassName("mySlides4");
+  var dots4 = document.getElementsByClassName("demo4");
+  if (n > slides4.length) {slideIndex4 = 1}
+  if (n < 1) {slideIndex4 = slides4.length}
+  for (i = 0; i < slides4.length; i++) {
+      slides4[i].style.display = "none";
+  }
+  for (i = 0; i < dots4.length; i++) {
+      dots4[i].className = dots4[i].className.replace(" active", "");
+  }
+  slides4[slideIndex4-1].style.display = "block";
+  dots4[slideIndex4-1].className += " active";
+}
+
+</script>
+
+<script>
+function openModal3() {
+  document.getElementById("myModal3").style.display = "block";
+}
+
+function closeModal3() {
+  document.getElementById("myModal3").style.display = "none";
+}
+
+var slideIndex3 = 1;
+showSlides3(slideIndex3);
+
+function plusSlides3(n) {
+  showSlides3(slideIndex3 += n);
+}
+
+function currentSlide3(n) {
+  showSlides3(slideIndex3 = n);
+}
+
+function showSlides3(n) {
+  var i;
+  var slides3 = document.getElementsByClassName("mySlides3");
+  var dots3 = document.getElementsByClassName("demo3");
+  if (n > slides3.length) {slideIndex3 = 1}
+  if (n < 1) {slideIndex3 = slides3.length}
+  for (i = 0; i < slides3.length; i++) {
+      slides3[i].style.display = "none";
+  }
+  for (i = 0; i < dots3.length; i++) {
+      dots3[i].className = dots3[i].className.replace(" active", "");
+  }
+  slides3[slideIndex3-1].style.display = "block";
+  dots3[slideIndex3-1].className += " active";
+}
+
+</script>
+
+<script>
+function openModal2() {
+  document.getElementById("myModal2").style.display = "block";
+}
+
+function closeModal2() {
+  document.getElementById("myModal2").style.display = "none";
+}
+
+var slideIndex2 = 1;
+showSlides2(slideIndex2);
+
+function plusSlides2(n) {
+  showSlides2(slideIndex2 += n);
+}
+
+function currentSlide2(n) {
+  showSlides2(slideIndex2 = n);
+}
+
+function showSlides2(n) {
+  var i;
+  var slides2 = document.getElementsByClassName("mySlides2");
+  var dots2 = document.getElementsByClassName("demo2");
+  if (n > slides2.length) {slideIndex2 = 1}
+  if (n < 1) {slideIndex2 = slides2.length}
+  for (i = 0; i < slides2.length; i++) {
+      slides2[i].style.display = "none";
+  }
+  for (i = 0; i < dots2.length; i++) {
+      dots2[i].className = dots2[i].className.replace(" active", "");
+  }
+  slides2[slideIndex2-1].style.display = "block";
+  dots2[slideIndex2-1].className += " active";
+}
+
+</script>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+</script>
+
+<script>
+function myFunction(ID) {
+    var x = document.getElementById("myDIV"+ID);
+    var y = document.getElementById("work"+ID);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        y.classList.toggle("fa-caret-up");
+    } else {
+        x.style.display = "none";
+        y.classList.toggle("fa-caret-up")
+    }
+}
+</script>
+
+<script>
+var timesClicked = 0;
+
+$(".gal-container").click(function() {
+    timesClicked++;
+
+    if (timesClicked>1) {
+        return;
+    } else {
+        $('.lazy_load').each(function(){
+        var img = $(this);
+        img.attr('src', img.data('src'));
+        });
+    }
+})
+</script>
+
+</main>
+{% endblock %}

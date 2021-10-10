@@ -1,0 +1,95 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+<div class="port">
+    <div class="img-bg">
+    <div class="what">
+        <h1 id="lblGreetings" class="topic"></h1>
+        <div class="mini"></div>
+        <h2 style="margin-bottom: 1%;" class="topic">This is Kiwigive</h2>
+        <h4 style="font-weight: normal">A Personal Portfolio Website Project</h4>
+    </div>
+    </div>
+    <div class="hi"></div>
+    <div class="section2">
+        <div class="container p-5">
+            <div class="row">
+            <div class="welcome-text col-lg-7 col-md-6 col-sm-12">
+                <h3 class="topic">Welcome!</h3>
+                <p>It is very nice to see you. Please enjoy visiting and discovering about me.</p>
+                <p>I am a Thai beginner developer who just graduated with a B.Sc.Mathematics degree. I am possionate in Computer Science, especially Artificial Intelligence.</p>
+                <p></p>
+                <p>I am available for full-time hire work and I would love to here your feedback about this website.</p>
+                <p>Feel free to send me a message &#x2665;</p>
+                <a href="/contact"><button class="btn btn-give">Contact me</button></a>
+            </div>
+            <div class="img col-lg-5 col-md-6 col-sm-12">
+                <div class="myImg-con">
+                    <img class="myImg"  src="/static/logo.png">
+                    <img class="myImg" id="myImg"  src="/static/logo_blink.png" style="display: none;">
+                </div>
+                <script>
+                window.onmousedown = mousedown;
+                window.onmouseup = mouseup;
+                window.ontouchstart = touchstart;
+                window.ontouchend = touchend;
+                    function mousedown() {
+                        document.getElementById("myImg").style.display = "block";
+                    }
+                    function mouseup() {
+                        document.getElementById("myImg").style.display = "none";
+                    }
+                    function touchstart() {
+                        document.getElementById("myImg").style.display = "block";
+                    }
+                    function touchend() {
+                        document.getElementById("myImg").style.display = "none";
+                    }
+
+                </script>
+            </div>
+            </div>
+            </div>
+        </div>
+
+    <div class="hi"></div>
+    <div class="bg-white" style="text-align: center">
+        <div class="container p-5">
+            <div class="welcome-text">
+                <h3 class="topic">Inspiration</h3>
+                <br>
+
+                <p>This website is my firstly and proudly present project, which is the final project of CS50x course.
+                I design my Website with liveliness and playful color theme, whice can represent my personality so well. You may found little details in every page.</p>
+                <p>For instance, did you notice that the seal in this page will blink, when you click anywhere in the page? Try it out!</p>
+                <br>
+                <p>Discover more information about this project, please visit</p>
+                <a href="/project/portfolio"><button class="btn btn-give">Portfolio Web</button></a>
+            </div>
+        </div>
+    </div>
+<div class="end"></div>
+</div>
+<script>
+    var myDate = new Date();
+    var hrs = myDate.getHours();
+
+    var greet;
+
+    if (hrs >= 6 && hrs < 12)
+        greet = 'Good Morning';
+    else if (hrs >= 12 && hrs < 17)
+        greet = 'Good Afternoon';
+    else if (hrs >= 17 && hrs <= 24)
+        greet = 'Good Evening';
+    else
+        greet = 'Nice to see you'
+
+    document.getElementById('lblGreetings').innerHTML = greet;
+</script>
+{% endblock %}
